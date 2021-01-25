@@ -102,6 +102,7 @@ func (r *JenkinsReconciler) SetupWithManager(mgr ctrl.Manager) error {
 
 // +kubebuilder:rbac:groups=apps;batch;core;extensionsnetworking.k8s.io;packages.operators.coreos.com;policy;rbac.authorization.k8s.io,resources=*,verbs=*
 // +kubebuilder:rbac:groups=apps.openshift.io;core;project.openshift.io;quota.openshift.io;template.openshift.io;route.openshift.io,resources=*,verbs=*
+// +kubebuilder:rbac:groups=security.openshift.io,resources=securitycontextconstraints,verbs=use
 // +kubebuilder:rbac:groups=jenkins.io,resources=jenkins;jenkins/status;jenkins/finalizers,verbs=*
 
 func (r *JenkinsReconciler) Reconcile(request ctrl.Request) (ctrl.Result, error) {
